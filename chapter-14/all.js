@@ -1,10 +1,4 @@
 var xhr = new XMLHttpRequest();
-
-xhr.open('get','https://hexschool.github.io/ajaxHomework/data.json',true);
-
-xhr.send(null);
-
-xhr.onload = function(data) {
-   console.log(xhr.responseText);
-};
-
+xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xhr.send('email=abcdexx@gmail.com&password=12345678');
